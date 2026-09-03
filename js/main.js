@@ -1,0 +1,143 @@
+// ============================================
+// CONFIGURAÇÃO
+// ============================================
+
+const GITHUB_REPO = 'SEU_USUARIO/SEU_REPOSITORIO'; // Substitua pelo seu
+
+// ============================================
+// DADOS DOS MODS (do seu mods.json)
+// ============================================
+
+const MODS_DATA = [
+    {
+        "id": "fabric-api",
+        "name": "Fabric API",
+        "author": "FabricMC",
+        "version": "0.154.2+26.2",
+        "loader": "Fabric",
+        "mc": "26.2",
+        "category": "Biblioteca",
+        "size": "2465 KB",
+        "file": "fabricapi.jar",
+        "summary": "API essencial que fornece os hooks e recursos de compatibilidade usados por praticamente todos os mods Fabric.",
+        "description": "<p>O <strong>Fabric API</strong> é o módulo central que fornece ganchos (hooks) importantes e recursos de intercompatibilidade utilizados por mods que usam o toolchain Fabric.</p><p>É uma dependência obrigatória para a grande maioria dos mods Fabric, incluindo praticamente todos os outros itens desta lista.</p>",
+        "dependencies": [],
+        "tags": ["api", "essencial", "biblioteca"],
+        "icon": "fa-code-branch",
+        "color": "#56B4E9"
+    },
+    {
+        "id": "forgeconfigapiport",
+        "name": "Forge Config API Port",
+        "author": "Fuzs",
+        "version": "26.2.1",
+        "loader": "Fabric",
+        "mc": "26.2",
+        "category": "Biblioteca",
+        "size": "595 KB",
+        "file": "ForgeConfigAPIPort.jar",
+        "summary": "Porta o sistema de configuração do Forge/NeoForge para outros ecossistemas de mods, como o Fabric.",
+        "description": "<p><strong>Forge Config API Port</strong> disponibiliza o sistema de configuração do NeoForge e do Forge para outros ecossistemas de modding.</p><p>Foi projetado com uma arquitetura multi-loader, sendo usado como dependência por diversos mods de Fuzs (como Puzzles Lib, Pick Up Notifier e Visual Workbench).</p>",
+        "dependencies": ["Fabric API"],
+        "tags": ["api", "configuração", "biblioteca"],
+        "icon": "fa-sliders-h",
+        "color": "#FCA311"
+    },
+    {
+        "id": "puzzleslib",
+        "name": "Puzzles Lib",
+        "author": "Fuzs",
+        "version": "26.2.1",
+        "loader": "Fabric",
+        "mc": "26.2",
+        "category": "Biblioteca",
+        "size": "1119 KB",
+        "file": "PuzzlesLib.jar",
+        "summary": "Biblioteca compartilhada usada pelos mods de Fuzs, como Pick Up Notifier e Visual Workbench.",
+        "description": "<p><strong>Puzzles Lib</strong> é a biblioteca comum utilizada pelos mods do desenvolvedor Fuzs.</p><p>Não adiciona conteúdo por si só, mas é um pré-requisito para diversos outros mods do mesmo autor.</p>",
+        "dependencies": ["Fabric API", "Forge Config API Port"],
+        "tags": ["biblioteca", "dependência"],
+        "icon": "fa-puzzle-piece",
+        "color": "#E63946"
+    },
+    {
+        "id": "baguettelib",
+        "name": "BaguetteLib",
+        "author": "Leclowndu93150",
+        "version": "2.0.4",
+        "loader": "Fabric",
+        "mc": "26.2",
+        "category": "Biblioteca",
+        "size": "99 KB",
+        "file": "baguettelib.jar",
+        "summary": "Biblioteca que adiciona novos eventos à API de modding, usada como base por outros mods do mesmo autor.",
+        "description": "<p><strong>BaguetteLib</strong> é uma biblioteca focada em adicionar mais eventos à API de modding (e outras funcionalidades extras).</p><p>É uma dependência do mod Particular Reforged, do mesmo desenvolvedor.</p>",
+        "dependencies": ["Fabric API"],
+        "tags": ["biblioteca", "eventos"],
+        "icon": "fa-bread-slice",
+        "color": "#F4A261"
+    },
+    {
+        "id": "konkrete",
+        "name": "Konkrete",
+        "author": "Keksuccino",
+        "version": "1.11.1",
+        "loader": "Fabric",
+        "mc": "26.2",
+        "category": "Biblioteca",
+        "size": "747 KB",
+        "file": "konkrete.jar",
+        "summary": "Biblioteca central usada pelos mods de Keksuccino, incluindo o Melody.",
+        "description": "<p><strong>Konkrete</strong> é a biblioteca principal (core) usada pelos mods desenvolvidos por Keksuccino.</p><p>É um pré-requisito para o funcionamento do mod Melody.</p>",
+        "dependencies": ["Fabric API"],
+        "tags": ["biblioteca", "dependência"],
+        "icon": "fa-cubes",
+        "color": "#2A9D8F"
+    },
+    {
+        "id": "modmenu",
+        "name": "Mod Menu",
+        "author": "Prospector, haykam821, gniftygnome, TerraformersMC",
+        "version": "20.0.0",
+        "loader": "Fabric",
+        "mc": "26.2",
+        "category": "Utilidade",
+        "size": "600 KB",
+        "file": "modmenu.jar",
+        "summary": "Adiciona um menu de mods ao jogo para visualizar e configurar todos os mods instalados.",
+        "description": "<p><strong>Mod Menu</strong> adiciona uma tela dedicada para visualizar a lista completa de mods instalados no jogo.</p><p>A partir dele também é possível acessar as telas de configuração dos mods compatíveis, tudo em um único lugar.</p>",
+        "dependencies": ["Fabric API"],
+        "tags": ["interface", "utilidade", "configuração"],
+        "icon": "fa-bars",
+        "color": "#E9C46A"
+    },
+    {
+        "id": "appleskin",
+        "name": "AppleSkin",
+        "author": "squeek502",
+        "version": "3.0.10+mc26.2",
+        "loader": "Fabric",
+        "mc": "26.2",
+        "category": "Interface (HUD)",
+        "size": "177 KB",
+        "file": "appleskin.jar",
+        "summary": "Melhora a HUD de comida, mostrando informações sobre saturação, regeneração e valor nutricional dos itens.",
+        "description": "<p><strong>AppleSkin</strong> adiciona diversas melhorias visuais na interface (HUD) relacionadas à comida.</p><p>Mostra a barra de saturação de fome, o efeito da regeneração natural de vida, e exibe informações nutricionais ao passar o mouse sobre alimentos no inventário.</p>",
+        "dependencies": ["Fabric API"],
+        "tags": ["hud", "comida", "informação"],
+        "icon": "fa-apple-alt",
+        "color": "#E76F51"
+    },
+    {
+        "id": "bettersearch",
+        "name": "Better Search",
+        "author": "rivalzin",
+        "version": "1.3.0",
+        "loader": "Fabric",
+        "mc": "26.2",
+        "category": "Utilidade",
+        "size": "270 KB",
+        "file": "bettersearch.jar",
+        "summary": "Deixa as barras de busca do jogo (como no inventário criativo) mais inteligentes.",
+        "description": "<p><strong>Better Search</strong> melhora as barras de pesquisa do Minecraft, tornando-as mais inteligentes e eficientes.</p><p>Facilita a busca por itens, por exemplo no inventário criativo, com resultados mais precisos.</p>",
+        "dependencies":
