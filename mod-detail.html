@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detalhes do Mod</title>
+    <title>Detalhes do Mod - Meus Mods</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
     <header class="header">
@@ -23,14 +26,18 @@
     </header>
 
     <main class="container">
-        <div class="mod-detail" id="modDetail">
-            <!-- Detalhes do mod serão carregados via JavaScript -->
+        <div id="loadingDetail" style="text-align: center; padding: 60px 0; color: var(--text-secondary);">
+            <i class="fas fa-spinner fa-spin" style="font-size: 48px;"></i>
+            <p style="margin-top: 16px;">Carregando detalhes...</p>
         </div>
+        <div class="mod-detail" id="modDetail"></div>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Meus Mods - Todos os direitos reservados</p>
+            <div class="footer-content">
+                <p>&copy; 2024 Meus Mods - Todos os direitos reservados</p>
+            </div>
         </div>
     </footer>
 
