@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meu Modrinth - Mods</title>
+    <title>Meus Mods - Minecraft Mods</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
     <!-- Header -->
@@ -34,20 +37,69 @@
         <div class="container">
             <h1>Descubra Mods Incríveis</h1>
             <p>Explore minha coleção de mods para Minecraft</p>
+            <div class="hero-stats">
+                <span id="totalMods">0</span> mods disponíveis
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-wrapper">
+                <div class="filter-group">
+                    <label>Categoria</label>
+                    <select id="categoryFilter">
+                        <option value="all">Todas</option>
+                        <option value="Biblioteca">Biblioteca</option>
+                        <option value="Utilidade">Utilidade</option>
+                        <option value="Interface (HUD)">Interface (HUD)</option>
+                        <option value="Performance">Performance</option>
+                        <option value="Estética">Estética</option>
+                        <option value="Gameplay">Gameplay</option>
+                        <option value="Áudio">Áudio</option>
+                        <option value="Social/Utilidade">Social/Utilidade</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Versão</label>
+                    <select id="versionFilter">
+                        <option value="all">Todas</option>
+                        <option value="26.2">1.20.2</option>
+                        <option value="26.4">1.20.4</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Ordenar</label>
+                    <select id="sortFilter">
+                        <option value="name">Nome</option>
+                        <option value="downloads">Downloads</option>
+                        <option value="size">Tamanho</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Mods Grid -->
     <main class="container">
-        <div class="mods-grid" id="modsGrid">
-            <!-- Mods serão carregados via JavaScript -->
+        <div id="loadingMessage" style="text-align: center; padding: 60px 0; color: var(--text-secondary);">
+            <i class="fas fa-spinner fa-spin" style="font-size: 48px;"></i>
+            <p style="margin-top: 16px;">Carregando mods...</p>
         </div>
+        <div class="mods-grid" id="modsGrid"></div>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Meus Mods - Todos os direitos reservados</p>
+            <div class="footer-content">
+                <p>&copy; 2024 Meus Mods - Todos os direitos reservados</p>
+                <div class="footer-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
