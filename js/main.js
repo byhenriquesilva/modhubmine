@@ -511,7 +511,7 @@ const MODS_DATA = [
         "mc": "26.2",
         "category": "Interface (HUD)",
         "size": "191 KB",
-        "file": "AdvancementPlaques-.jar",
+        "file": "AdvancementPlaques.jar",
         "summary": "Substitui os avisos padrão de conquistas por placas mais elegantes.",
         "description": "<p><strong>Advancement Plaques</strong> substitui as notificações padrão de conquistas (toasts) por placas visuais mais bonitas e estilizadas.</p>",
         "dependencies": ["Fabric API", "Iceberg"],
